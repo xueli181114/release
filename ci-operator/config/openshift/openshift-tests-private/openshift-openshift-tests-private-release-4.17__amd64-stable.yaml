@@ -164,10 +164,10 @@ tests:
     env:
       CHANNEL_GROUP: candidate
       E2E_RUN_TAGS: '@rosa and @critical'
-      OPENSHIFT_VERSION: "4.17"
       TEST_FILTERS: ~ChkUpgrade&;~NonPreRelease&;~Serial&;~Disruptive&;~DisconnectedOnly&;~HyperShiftMGMT&;~MicroShiftOnly&;~NonHyperShiftHOST&;ROSA&
       TEST_IMPORTANCE: Critical
       TEST_PROFILE: rosa-hcp-advanced
+      VERSION: "4.17"
     test:
     - chain: openshift-e2e-test-hypershift-qe
     workflow: rosa-lifecycle-advanced
