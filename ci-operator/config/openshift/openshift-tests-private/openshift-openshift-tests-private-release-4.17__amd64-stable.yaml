@@ -34,7 +34,7 @@ base_images:
   rosa-aws-cli:
     name: rosa-aws-cli
     namespace: ci
-    tag: release
+    tag: latest
   tests-private:
     name: tests-private
     namespace: ci
@@ -164,6 +164,7 @@ tests:
     env:
       CHANNEL_GROUP: candidate
       E2E_RUN_TAGS: '@rosa and @critical'
+      NAME_PREFIX: ocpe2e
       TEST_FILTERS: ~ChkUpgrade&;~NonPreRelease&;~Serial&;~Disruptive&;~DisconnectedOnly&;~HyperShiftMGMT&;~MicroShiftOnly&;~NonHyperShiftHOST&;ROSA&
       TEST_IMPORTANCE: Critical
       TEST_PROFILE: rosa-hcp-advanced
