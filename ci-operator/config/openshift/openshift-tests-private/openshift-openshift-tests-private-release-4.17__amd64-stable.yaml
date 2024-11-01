@@ -169,6 +169,7 @@ tests:
       TEST_IMPORTANCE: Critical
       TEST_PROFILE: rosa-hcp-advanced
       VERSION: "4.17"
+      AUTOSCALE: "false"
     test:
     - chain: openshift-e2e-test-hypershift-qe
     workflow: rosa-lifecycle-advanced
