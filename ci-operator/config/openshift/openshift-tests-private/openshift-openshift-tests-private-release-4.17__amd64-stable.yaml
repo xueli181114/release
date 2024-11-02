@@ -170,6 +170,7 @@ tests:
       TEST_PROFILE: rosa-hcp-advanced
       VERSION: "4.17"
       AUTOSCALE: "false"
+      ALLOW_REGISTRIES: "false"
     test:
     - chain: openshift-e2e-test-hypershift-qe
     workflow: rosa-lifecycle-advanced
