@@ -466,6 +466,12 @@ fi
 
 SUBNET_ID_SWITCH=""
 if [[ "$ENABLE_BYOVPC" == "true" ]]; then
+  public_subnets=$(cat ${SHARED_DIR}/public_subnet_ids)
+  echo ">>>"
+  echo "$public_subnets"
+  cp ${SHARED_DIR}/public_subnet_ids ${ARTIFACT_DIR}/public_subnet_ids
+  echo ">>>"
+  exit 0
   PUBLIC_SUBNET_IDs=$(cat ${SHARED_DIR}/public_subnet_ids | tr -d "[']")
   PRIVATE_SUBNET_IDs=$(cat ${SHARED_DIR}/private_subnet_ids | tr -d "[']")
   if [[ -z "${PRIVATE_SUBNET_IDs}" ]]; then
