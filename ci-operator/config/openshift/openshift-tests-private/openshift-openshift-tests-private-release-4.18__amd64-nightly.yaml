@@ -1054,6 +1054,7 @@ tests:
       OPENSHIFT_VERSION: "4.18"
       TEST_FILTERS: ~ChkUpgrade&;~NonPreRelease&;~Serial&;~Disruptive&;~DisconnectedOnly&;~HyperShiftMGMT&;~MicroShiftOnly&;ROSA&
       TEST_PROFILE: rosa-private-link
+      REGION: us-east-1
     test:
     - chain: openshift-e2e-test-qe
     workflow: rosa-lifecycle-private-advanced
